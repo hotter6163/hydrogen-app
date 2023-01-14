@@ -17,6 +17,7 @@ import {
   CollectionConnection,
   ProductConnection,
 } from '@shopify/hydrogen/storefront-api-types';
+import {AssetHandler} from '~/components/AssetHandler.client';
 
 export default function Homepage() {
   useServerAnalytics({
@@ -66,6 +67,7 @@ function HomepageContent() {
 
   return (
     <>
+      <AssetHandler />
       {primaryHero && (
         <Hero {...primaryHero} height="full" top loading="eager" />
       )}
